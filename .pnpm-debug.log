@@ -1,15 +1,149 @@
 {
   "0 debug pnpm:scope": {
-    "selected": 1,
-    "workspacePrefix": "/home/cjols/Code/powerx/application"
+    "selected": 3,
+    "total": 3,
+    "workspacePrefix": "/home/cjols/Code/powerx/sinclair-repro"
   },
-  "1 error pnpm": {
-    "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@powerx/application",
+      "version": "null",
+      "packageManager": "pnpm@7.1.9",
+      "description": "Any package installed here will be transitively available to all packages in the application. Generally avoid this and install utils in scripts instead.",
+      "pnpm": {
+        "overrides": {
+          "@opentelemetry/api-metrics": "0.29.2"
+        },
+        "packageExtensions": {
+          "react-ga": {
+            "peerDependenciesMeta": {
+              "prop-types": {
+                "optional": true
+              }
+            }
+          },
+          "react-query": {
+            "peerDependenciesMeta": {
+              "react-native": {
+                "optional": true
+              }
+            }
+          },
+          "react-native-get-random-values": {
+            "peerDependenciesMeta": {
+              "react-native": {
+                "optional": true
+              }
+            }
+          },
+          "@aws-sdk/client-s3@3": {
+            "peerDependenciesMeta": {
+              "@aws-sdk/signature-v4-multi-region": {
+                "optional": true
+              }
+            }
+          }
+        }
+      },
+      "dependencies": {
+        "@sinclair/typebox": "0.23.5"
+      }
+    },
+    "prefix": "/home/cjols/Code/powerx/sinclair-repro"
+  },
+  "2 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@org/foo-utils",
+      "version": "1.0.0",
+      "description": "Consume some models",
+      "main": "dist/index.js",
+      "typings": "dist/index.d.ts",
+      "license": "UNLICENSED",
+      "dependencies": {
+        "@powerx/models": "workspace:*",
+        "@sinclair/typebox": "0.23.5",
+        "fp-ts": "2.12.1"
+      },
+      "devDependencies": {
+        "@types/node": "16.11.39",
+        "typescript": "4.6.4"
+      },
+      "scripts": {
+        "build": "tsc -p tsconfig.json"
+      }
+    },
+    "prefix": "/home/cjols/Code/powerx/sinclair-repro/packages/foo-utils"
+  },
+  "3 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@org/models",
+      "version": "1.0.3",
+      "description": "Sample models",
+      "main": "dist/index.js",
+      "typings": "dist/index.d.ts",
+      "license": "UNLICENSED",
+      "devDependencies": {
+        "@types/node": "16.11.39",
+        "typescript": "4.6.4"
+      },
+      "scripts": {
+        "build": "tsc -p tsconfig.json"
+      },
+      "dependencies": {
+        "@sinclair/typebox": "0.23.5"
+      }
+    },
+    "prefix": "/home/cjols/Code/powerx/sinclair-repro/packages/models"
+  },
+  "4 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/home/cjols/.local/share/pnpm/store/v3",
+    "virtualStoreDir": "/home/cjols/Code/powerx/sinclair-repro/node_modules/.pnpm"
+  },
+  "5 debug pnpm:stage": {
+    "prefix": "/home/cjols/Code/powerx/sinclair-repro",
+    "stage": "resolution_started"
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@sinclair/typebox/0.23.5",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@sinclair/typebox",
+      "rawSpec": "0.23.5"
+    }
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/node/16.11.39",
+    "wanted": {
+      "dependentId": "packages/models",
+      "name": "@types/node",
+      "rawSpec": "16.11.39"
+    }
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/typescript/4.6.4",
+    "wanted": {
+      "dependentId": "packages/models",
+      "name": "typescript",
+      "rawSpec": "4.6.4"
+    }
+  },
+  "9 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@sinclair/typebox/0.23.5",
+    "wanted": {
+      "dependentId": "packages/models",
+      "name": "@sinclair/typebox",
+      "rawSpec": "0.23.5"
+    }
+  },
+  "10 error pnpm": {
+    "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+    "pkgsStack": [],
     "err": {
       "name": "pnpm",
-      "message": "No package.json (or package.yaml, or package.json5) was found in \"/home/cjols/Code/powerx/application\".",
-      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
-      "stack": "pnpm: No package.json (or package.yaml, or package.json5) was found in \"/home/cjols/Code/powerx/application\".\n    at readProjectManifest (/home/cjols/.fnm/node-versions/v16.13.0/installation/lib/node_modules/pnpm/dist/pnpm.cjs:19775:13)\n    at async Object.readProjectManifestOnly (/home/cjols/.fnm/node-versions/v16.13.0/installation/lib/node_modules/pnpm/dist/pnpm.cjs:19779:28)\n    at async readProjectManifestOnly (/home/cjols/.fnm/node-versions/v16.13.0/installation/lib/node_modules/pnpm/dist/pnpm.cjs:43289:24)\n    at async Object.handler (/home/cjols/.fnm/node-versions/v16.13.0/installation/lib/node_modules/pnpm/dist/pnpm.cjs:178475:24)\n    at async /home/cjols/.fnm/node-versions/v16.13.0/installation/lib/node_modules/pnpm/dist/pnpm.cjs:182688:21\n    at async run (/home/cjols/.fnm/node-versions/v16.13.0/installation/lib/node_modules/pnpm/dist/pnpm.cjs:182662:34)\n    at async runPnpm (/home/cjols/.fnm/node-versions/v16.13.0/installation/lib/node_modules/pnpm/dist/pnpm.cjs:182874:5)\n    at async /home/cjols/.fnm/node-versions/v16.13.0/installation/lib/node_modules/pnpm/dist/pnpm.cjs:182866:7"
+      "message": "In packages/foo-utils: No matching version found for @powerx/models@* inside the workspace",
+      "code": "ERR_PNPM_NO_MATCHING_VERSION_INSIDE_WORKSPACE",
+      "stack": "pnpm: In packages/foo-utils: No matching version found for @powerx/models@* inside the workspace\n    at tryResolveFromWorkspace (/home/cjols/.node/corepack/pnpm/7.1.9/dist/pnpm.cjs:84775:15)\n    at resolveNpm (/home/cjols/.node/corepack/pnpm/7.1.9/dist/pnpm.cjs:84667:39)\n    at Object.resolve (/home/cjols/.node/corepack/pnpm/7.1.9/dist/pnpm.cjs:84897:34)\n    at ctx.requestsQueue.add.priority (/home/cjols/.node/corepack/pnpm/7.1.9/dist/pnpm.cjs:91598:75)\n    at run (/home/cjols/.node/corepack/pnpm/7.1.9/dist/pnpm.cjs:91359:90)\n    at PQueue._tryToStartAnother (/home/cjols/.node/corepack/pnpm/7.1.9/dist/pnpm.cjs:91313:13)\n    at /home/cjols/.node/corepack/pnpm/7.1.9/dist/pnpm.cjs:91372:16\n    at new Promise (<anonymous>)\n    at PQueue.add (/home/cjols/.node/corepack/pnpm/7.1.9/dist/pnpm.cjs:91354:16)\n    at resolveAndFetch (/home/cjols/.node/corepack/pnpm/7.1.9/dist/pnpm.cjs:91598:55)"
     }
   }
 }

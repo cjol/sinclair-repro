@@ -1,11 +1,7 @@
 import { Type, Static } from '@sinclair/typebox';
 
 export const Foo = Type.Object({
-  id: Type.Number({
-    type: 'integer',
-    description: 'Unique id of the structure',
-    example: 100,
-  }),
+  id: Type.Number(),
 });
 export type Foo = Static<typeof Foo>;
 

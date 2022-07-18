@@ -1,7 +1,7 @@
 {
-  "name": "@powerx/models",
+  "name": "@org/models",
   "version": "1.0.3",
-  "description": "Static type definitions for PowerX value types",
+  "description": "Sample models",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "UNLICENSED",
