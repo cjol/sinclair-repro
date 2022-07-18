@@ -1,0 +1,12 @@
+{
+	// This config file isn't directly used, but it provides handy aliasing for VS Code
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@powerx/*": ["./packages/*/src"]
+		},
+		"plugins": [{ "name": "typescript-plugin-css-modules" }]
+	},
+	// Need to be explicit here else eslint tries to parse dist and crashes
+	"exclude": ["dist", "node_modules", "coverage", "*.js"]
+}

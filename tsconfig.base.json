@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"allowUnreachableCode": false,
+		"noFallthroughCasesInSwitch": true,
+		"allowSyntheticDefaultImports": true,
+		"downlevelIteration": true,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"sourceMap": true,
+		"strictNullChecks": true,
+		"strict": true,
+		"pretty": true,
+		"jsx": "react",
+		"suppressImplicitAnyIndexErrors": true,
+		"declaration": true,
+		"target": "es2022",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"baseUrl": ".",
+		"incremental": true,
+		"lib": ["ES2021", "DOM"],
+		"skipLibCheck": true,
+		"resolveJsonModule": true,
+		"declarationMap": true
+	}
+}

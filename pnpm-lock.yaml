@@ -1,0 +1,60 @@
+lockfileVersion: 5.4
+
+overrides:
+  '@opentelemetry/api-metrics': 0.29.2
+
+packageExtensionsChecksum: d477f5d42022340d5950d852c1400750
+
+importers:
+
+  .:
+    specifiers:
+      '@sinclair/typebox': 0.23.5
+    dependencies:
+      '@sinclair/typebox': 0.23.5
+
+  packages/models:
+    specifiers:
+      '@sinclair/typebox': 0.23.5
+      '@types/node': 16.11.39
+      typescript: 4.6.4
+    dependencies:
+      '@sinclair/typebox': 0.23.5
+    devDependencies:
+      '@types/node': 16.11.39
+      typescript: 4.6.4
+
+  packages/org-structure:
+    specifiers:
+      '@powerx/models': workspace:*
+      '@sinclair/typebox': 0.23.5
+      '@types/node': 16.11.39
+      fp-ts: 2.12.1
+      typescript: 4.6.4
+    dependencies:
+      '@powerx/models': link:../models
+      '@sinclair/typebox': 0.23.5
+      fp-ts: 2.12.1
+    devDependencies:
+      '@types/node': 16.11.39
+      typescript: 4.6.4
+
+packages:
+
+  /@sinclair/typebox/0.23.5:
+    resolution: {integrity: sha512-AFBVi/iT4g20DHoujvMH1aEDn8fGJh4xsRGCP6d8RpLPMqsNPvW01Jcn0QysXTsg++/xj25NmJsGyH9xug/wKg==}
+    dev: false
+
+  /@types/node/16.11.39:
+    resolution: {integrity: sha512-K0MsdV42vPwm9L6UwhIxMAOmcvH/1OoVkZyCgEtVu4Wx7sElGloy/W7kMBNe/oJ7V/jW9BVt1F6RahH6e7tPXw==}
+    dev: true
+
+  /fp-ts/2.12.1:
+    resolution: {integrity: sha512-oxvgqUYR6O9VkKXrxkJ0NOyU0FrE705MeqgBUMEPWyTu6Pwn768cJbHChw2XOBlgFLKfIHxjr2OOBFpv2mUGZw==}
+    dev: false
+
+  /typescript/4.6.4:
+    resolution: {integrity: sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true

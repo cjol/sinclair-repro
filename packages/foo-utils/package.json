@@ -1,0 +1,20 @@
+{
+  "name": "@powerx/org-structure",
+  "version": "1.0.0",
+  "description": "Utilities to help validate access rights against arbitrary org structure",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@powerx/models": "workspace:*",
+    "@sinclair/typebox": "0.23.5",
+    "fp-ts": "2.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "16.11.39",
+    "typescript": "4.6.4"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  }
+}
